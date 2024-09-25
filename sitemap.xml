@@ -4,7 +4,7 @@
   <url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/2024-year-of-the-supply-chain-attack/</loc>
+    <loc>http://localhost:1313/post/2024-year-of-the-supply-chain-attack/</loc>
     <lastmod>2024-09-23T14:19:48+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
@@ -13,7 +13,7 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-09-23T14:19:48+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/supply-chain/</loc>
+    <loc>http://localhost:1313/tags/supply-chain/</loc>
     <lastmod>2024-09-23T14:19:48+10:00</lastmod>
   </url>
 </urlset>
