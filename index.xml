@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent Posts on Gene Wahrlich</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Recent Posts on Gene Wahrlich</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, Gene Wahrlich.</copyright>
+    <lastBuildDate>Mon, 23 Sep 2024 14:19:48 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;hi&#34;&gt;Hi&lt;/h1&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/genewahrlich.jpg&#34; alt=&#34;A picture of Gene Wahrlich&#39;s mug&#34; title=&#34;gene wahrlich&#34; width=&#34;300&#34; /&gt;&#xA;&lt;p&gt;I&amp;rsquo;m Gene. I head up the offensive security capability at Amazon. Specifically, in the Games, Media and Entertainment (GME) space. That means my day-to-day work involves managing offsec for some well-known products and businesses:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Prime Video&lt;/li&gt;&#xA;&lt;li&gt;Amazon MGM Studios&lt;/li&gt;&#xA;&lt;li&gt;Amazon Music&lt;/li&gt;&#xA;&lt;li&gt;Audible&lt;/li&gt;&#xA;&lt;li&gt;IMDb&lt;/li&gt;&#xA;&lt;li&gt;Twitch&lt;/li&gt;&#xA;&lt;li&gt;Amazon Game Studios&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Before Amazon, I worked for offensive security consultancies MWR (Now WithSecure) and IOActive.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m interested in the frontiers of cyber attack, having seen the progression from network to apps to cloud and now to identity itself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2024 Year of the Supply Chain Attack</title>
+      <link>http://localhost:1313/post/2024-year-of-the-supply-chain-attack/</link>
+      <pubDate>Mon, 23 Sep 2024 14:19:48 +1000</pubDate>
+      <guid>http://localhost:1313/post/2024-year-of-the-supply-chain-attack/</guid>
+      <description>&lt;h1 id=&#34;exploding-pagers&#34;&gt;Exploding pagers&lt;/h1&gt;&#xA;&lt;p&gt;The news of Hezbollah agents being targeted with exploding pagers and UHF radios was a shock to us all. Whilst this type of attack was always a possibility in theory, seeing it occur in practice was perhaps the most visually horrific instance of a supply chain attack in recent history. This attack, along with the .mobi WHOIS debacle and the faulty Crowdstrike update, got me thinking quite a lot about supply chain attack surface. We all have these vulnerabilities, and there&amp;rsquo;s very little we can do in the way of mitigation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
