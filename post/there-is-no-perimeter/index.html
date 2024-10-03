@@ -8,17 +8,17 @@
 <link rel="shortcut icon" href="https://wahrlich.github.io/images/favicon.png" />
 <title>There is no perimeter | Gene Wahrlich</title>
 <meta name="title" content="There is no perimeter" />
-<meta name="description" content="Let me tell you a story
-A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
-That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company&rsquo;s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs." />
+<meta name="description" content="
+Let me tell you a story
+A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else." />
 <meta name="keywords" content="zero trust,identity,saas," />
 
 
 <meta property="og:url" content="https://wahrlich.github.io/post/there-is-no-perimeter/">
   <meta property="og:site_name" content="Gene Wahrlich">
   <meta property="og:title" content="There is no perimeter">
-  <meta property="og:description" content="Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
-That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company’s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.">
+  <meta property="og:description" content="
+Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -35,15 +35,15 @@ That assumption came back to bite them. I was hired to do a pentest of some new 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://wahrlich.github.io/images/share.png">
   <meta name="twitter:title" content="There is no perimeter">
-  <meta name="twitter:description" content="Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
-That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company’s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.">
+  <meta name="twitter:description" content="
+Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.">
 
 
 
 
   <meta itemprop="name" content="There is no perimeter">
-  <meta itemprop="description" content="Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
-That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company’s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.">
+  <meta itemprop="description" content="
+Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.">
   <meta itemprop="datePublished" content="2024-10-03T11:49:23+10:00">
   <meta itemprop="dateModified" content="2024-10-03T11:49:23+10:00">
   <meta itemprop="wordCount" content="566">
@@ -252,7 +252,8 @@ That assumption came back to bite them. I was hired to do a pentest of some new 
 </p>
 
 <content>
-  <h2 id="let-me-tell-you-a-story">Let me tell you a story</h2>
+  <p><img src="/images/95heyk.jpg" alt="morpheus"></p>
+<h2 id="let-me-tell-you-a-story">Let me tell you a story</h2>
 <p>A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.</p>
 <p>That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company&rsquo;s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.</p>
 <p>Those old APIs were COBOL - which may give away that we&rsquo;re talking about a bank - and I was able to use Cross-Site Request Forgery (CSRF) to have any of their customers transfer all funds out of their account and in to my account. That was the wake up call they needed.</p>
