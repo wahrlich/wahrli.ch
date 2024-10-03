@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://wahrlich.github.io/images/favicon.png" />
+<title>There is no perimeter | Gene Wahrlich</title>
+<meta name="title" content="There is no perimeter" />
+<meta name="description" content="Let me tell you a story
+A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
+That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company&rsquo;s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs." />
+<meta name="keywords" content="zero trust,identity,saas," />
+
+
+<meta property="og:url" content="https://wahrlich.github.io/post/there-is-no-perimeter/">
+  <meta property="og:site_name" content="Gene Wahrlich">
+  <meta property="og:title" content="There is no perimeter">
+  <meta property="og:description" content="Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
+That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company’s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-10-03T11:49:23+10:00">
+    <meta property="article:modified_time" content="2024-10-03T11:49:23+10:00">
+    <meta property="article:tag" content="Zero Trust">
+    <meta property="article:tag" content="Identity">
+    <meta property="article:tag" content="Saas">
+    <meta property="og:image" content="https://wahrlich.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://wahrlich.github.io/images/share.png">
+  <meta name="twitter:title" content="There is no perimeter">
+  <meta name="twitter:description" content="Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
+That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company’s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.">
+
+
+
+
+  <meta itemprop="name" content="There is no perimeter">
+  <meta itemprop="description" content="Let me tell you a story A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.
+That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company’s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.">
+  <meta itemprop="datePublished" content="2024-10-03T11:49:23+10:00">
+  <meta itemprop="dateModified" content="2024-10-03T11:49:23+10:00">
+  <meta itemprop="wordCount" content="566">
+  <meta itemprop="image" content="https://wahrlich.github.io/images/share.png">
+  <meta itemprop="keywords" content="Zero Trust,Identity,Saas">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Gene Wahrlich</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/post">Posts</a>
+
+
+<a href="/about/">About</a>
+
+
+</nav></header>
+  <main>
+
+<h1>There is no perimeter</h1>
+<p>
+  <i>
+    <time datetime='2024-10-03' pubdate>
+      03 Oct, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+  <h2 id="let-me-tell-you-a-story">Let me tell you a story</h2>
+<p>A few years ago, I was working with a company that had a traditional approach to security. You know the type: a big firewall around the internal network, with the assumption that everything inside was safe and cozy. As long as you were “in the network,” you were trusted. They had one big Active Directory (AD) domain and everything could access everything else.</p>
+<p>That assumption came back to bite them. I was hired to do a pentest of some new APIs and I realised quickly that they were themselves talking to some other, older APIs that had been running the company&rsquo;s core business for the past 20 years. Since I was inside the trust boundary, I could access the old APIs directly and bypass the authentication and authorisation enforced by the new APIs.</p>
+<p>Those old APIs were COBOL - which may give away that we&rsquo;re talking about a bank - and I was able to use Cross-Site Request Forgery (CSRF) to have any of their customers transfer all funds out of their account and in to my account. That was the wake up call they needed.</p>
+<p>Fast forward to today, where everyone is remote, apps live in the cloud, and every device has WiFi, it’s impossible to rely on the idea of a trusted internal network like that bank did. This is where Zero Trust comes in, and it’s been a game changer.</p>
+<h2 id="there-is-no-perimeter">There is no perimeter</h2>
+<p>Today’s networks are borderless. I mostly work from home (for now, ha), my coworkers are scattered across the globe, and everyone is accessing company apps on personal devices. This isn’t just a temporary thing; it’s the way work happens now. So, trying to create a trusted internal network is like putting up a fence around an empty field. The real action - and exploitation - is happening elsewhere.</p>
+<p>One of the big shifts we&rsquo;ve all had to embrace is that it’s not about the network anymore; it’s about identity. Every time I want to access company resources, whether I’m on my phone, laptop, or some other device, I have to prove who I am. I log in through an Identity Provider (IdP), which makes sure I’m actually me.</p>
+<p>There has been much hoo-ha about Identity being the new perimeter, but I don&rsquo;t think that&rsquo;s accurate. I don&rsquo;t think there is a perimeter at all.</p>
+<h2 id="the-future-is-zero-trust">The future is Zero Trust</h2>
+<p>Zero Trust flips the old security model on its head. Instead of assuming that everything inside the network is safe, it assumes nothing is safe no matter where it’s coming from. The idea is simple: never trust, always verify. It doesn’t matter if you’re sitting at a desk in the office or working from a café in Changi Airport, you have to prove who you are every time.</p>
+<p>Zero Trust also means there’s no such thing as a free pass after login. Just because I’ve authenticated doesn’t mean I’m off the hook. Every single request to perform a restricted action has to be authenticated. That&rsquo;s usually with an OAuth token or a session ID, which have become the new targets in red team exercises to get around MFA.</p>
+<p>In the end, Zero Trust has changed the way I think about security. Instead of hunting for unpatched servers in external attack surface, it&rsquo;s now the norm for offsec folks to go phishing for identities instead.</p>
+
+</content>
+<p>
+  
+  <a href="https://wahrlich.github.io/tags/zero-trust/">#Zero Trust</a>
+  
+  <a href="https://wahrlich.github.io/tags/identity/">#Identity</a>
+  
+  <a href="https://wahrlich.github.io/tags/saas/">#Saas</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
